@@ -6,7 +6,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ children, className, ...rest }: ButtonProps) {
   return (
-    // The button component is a simple button with a blue background color
     <button
       {...rest}
       className={clsx(

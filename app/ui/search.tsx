@@ -18,7 +18,6 @@ export default function Search({ placeholder }: { placeholder: string }) {
     else {
       search.delete('params');
     }
-    // it replaces the current URL with the new one
     replace(`${pathname}?${search?.toString()}`);
   }, 300)
 
@@ -33,6 +32,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
         placeholder={placeholder}
         defaultValue={searchParams.get('params')?.toString()}
       />
+      {/* A icon on search bar with styling */}
       <MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
     </div>
   );
